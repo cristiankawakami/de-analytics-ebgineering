@@ -1,0 +1,13 @@
+shop: # isso precisa corresponder ao perfil em seu arquivo dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: /Users/t736984/Downloads/fresh-park-382022-a46a908fef41.json
+      project: fresh-park-382022
+      dataset: dbt_cristian
+      threads: 1
+      timeout_seconds: 300
+      location: US
+      priority: interactive
